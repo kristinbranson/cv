@@ -1,0 +1,315 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Kristin Branson 20210629
+%
+% Based on the following template:
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Original author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Modifications by:
+% Junhao Dong <junhao.dong96@gmail.com>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, letterpaper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-skyblue}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\makeatletter
+\patchcmd{\@sectioncolor}{\color}{\mdseries\color}{}{}
+\makeatother
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[rectangle,edge,right]{profile}
+\name{Kristin}{Branson}
+\position{Senior Group Leader\\Head of Computation \& Theory}
+% \address{address}
+
+% \mobile{(678) 343-1817}
+\email{kristinbranson@gmail.com}
+\homepage{https://www.janelia.org/lab/branson-lab}
+\github{kristinbranson}
+% \linkedin{junhaodong}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+\googlescholar{g558OVoAAAAJ}{Kristin Branson}
+\twitter{@KristinMBranson}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \extrainfo{extra informations}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[C]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% \makecvfooter
+%   {\today}
+%   {Junhao Dong~~~·~~~Résumé}
+%   {\thepage}
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+% \input{resume/education.tex}
+% \input{resume/skills.tex}
+% \input{resume/experience.tex}
+% \input{resume/projects.tex}
+
+\cvsection{Summary}
+\vspace{\acvSectionContentTopSkip}\\
+My goal is to develop new and impactful ways to use machine vision and learning to gain insight into biological questions, and usable software so that these methods are broadly adopted. My work has contributed to and advanced the role of quantitative analysis of animal behavior in neuroscience and biology more generally. 
+
+\cvsection{Education}
+\begin{cventries}
+  \cventry
+    {Ph.D., M.S., Computer Science} % Degree
+    {University of California, San Diego} % Institution
+    {La Jolla, CA} % Location
+    {2007, 2002} % Date(s)
+    {
+      \begin{cvitems} % Description(s) bullet points
+      \item Dissertation Title: {\it Tracking Multiple Mice through Severe Occlusions}
+      \item Advisors: Serge Belongie and Sanjoy Dasgupta
+      \end{cvitems}
+    }
+    \cventry{A.B., {\it Cum Laude}, Computer Science}
+    {Harvard University}
+    {Cambridge, MA}
+    {2000}
+    {}
+\end{cventries}
+\vspace{-4mm}
+\cvsection{Experience}
+
+
+\begin{cventries}
+\cventryfour{HHMI Janelia Research Campus}{Ashburn, VA}{Senior Group Leader and Head of Computation \& Theory}{2017 - PRESENT}{Group Leader (Level 2)}{2013 - 2017}{Group Leader (Level 1)}{2010 - 2013}{}
+\cventry{Postdoctoral Researcher}{California Institute of Technology}{Pasadena, CA}{2007 - 2010}{
+\begin{cvitems}
+  \item Advisors: Pietro Perona and Michael Dickinson
+\end{cvitems}
+}
+\end{cventries}
+
+\cvsection{Honors and Awards}
+\vspace{\acvSectionContentTopSkip}
+\vspace{2mm}
+\begin{cvitems}
+\item Selected as one of Cell’s ``40 under 40'' scientists in commemoration of their 40th anniversary, 2015.
+\item Faculty of 1000 Recommendation for JAABA, 2013.
+\item NASA Graduate Student Researcher Program Fellowship, 2003-2006.
+\end{cvitems}\\
+\vspace{\acvSectionContentTopSkip}
+
+\cvsection{Selected Publications}
+\vspace{\acvSectionContentTopSkip}
+\vspace{2mm}
+\input{selected_bib}\\
+\vspace{\acvSectionContentTopSkip}
+
+
+\cvsection{All Publications}
+\vspace{\acvSectionContentTopSkip}
+\vspace{2mm}
+\input{bib}
+\vspace{\acvSectionContentTopSkip}
+
+\cvsection{Open-Source Software}
+\vspace{\acvSectionContentTopSkip}\\
+I lead, co-developed, and co-maintain the following open-source pieces of software:\\
+\begin{cvitems}
+\item APT: The Animal Part Tracker, \url{http://kristinbranson.github.io/APT/}
+  \item BABAM: The Browsable Atlas of Behavior-Anatomy Maps, \url{https://kristinbranson.github.io/BABAM/}
+\item BIAS: Basic Image Acquisition Software \url{http://stuff.iorodeo.com/notes/bias/}
+\item JAABA: Janelia Automatic Animal Behavior Annotator, \url{http://jaaba.sourceforge.net/}
+\item Ctrax: The Caltech Multiple Walking Fly Tracker, \url{http://ctrax.sourceforge.net/}
+\end{cvitems}
+\vspace{\acvSectionContentTopSkip}
+
+\cvsection{Conferences Organized}
+\vspace{\acvSectionContentTopSkip}
+\vspace{2mm}
+\begin{cvitems}
+\item Janelia Conference: Women in Computational Biology, November 2019.
+\item Bioimage Computing Workshop, CVPR, June 2019.
+\item Society for Neuroscience Virtual Conference on Machine Learning, June 2019.
+\item Janelia Junior Scientist Workshop on Machine Learning and Computer Vision, April 2019, October 2017, October 2016, October 2015.
+\item Janelia Conference: What Can Machine Learning Do for Neuroscience and Vice-Versa?, November 2010.
+\end{cvitems}
+\vspace{\acvSectionContentTopSkip}
+
+\cvsection{Scientific Leadership}
+\vspace{\acvSectionContentTopSkip}
+\vspace{2mm}
+\begin{cvitems}
+\item As part of Senior Leadership at Janelia, participate in institute-wide planning and decision-making, 2017-present.
+\item As Head of the Computation and Theory Research Area, manage recruiting, hiring, and renewal of Group Leaders, and manage budgets for 9 labs, 2017-present.
+\item Co-created the Janelia Diversity, Equity, and Inclusion Committee, 2018. Chaired committee 2018-2020. Participate 2020-present. As part of this committee, we have researched and proposed initiatives to Janelia leadership, invited speakers to present at Janelia, and started a DEI reading group.
+\item Started, co-organize, and contribute to Computer Vision and Machine Learning weekly reading group and internal seminar series at Janelia, 2014-present.
+\item Worked with Scientific Computing Systems Group at Janelia to design and create a GPU cluster for Janelia researchers, 2018-present.
+\item Started and co-organize the Janelia Computation and Theory Seminar series, bi-weekly, 2018-present. 
+\item Participate in and lead a Women's Mentoring Group at Janelia, 2018-present.
+\item Started and co-organize Janelia Computation and Theory ``Fancy Friday'' social event to build community at Janelia, 2018-present. 
+\end{cvitems}
+\vspace{\acvSectionContentTopSkip}
+
+\cvsection{Outreach}
+\vspace{\acvSectionContentTopSkip}
+\vspace{2mm}
+
+\begin{cvitems}
+\item Started and organize ``Hour of Code'' bi-monthly outreach activity for Janelia scientists to share their enthusiasm for and the impact of programming with grade-school children at local elementary schools and libraries, 2017-present.
+\item Worked with high school teachers at Loudoun Academies of Science to develop a machine learning course for high school students, 2018. Volunteer to provide project mentorship to students in these classes, 2018-present.
+\item Participate in ``Raising Excitement for Science, Engineering, and Technology'' (RESET) Education Outreach Program, 2018-present.
+\item Taught/mentored in several summer and winter schools, including Neuromatch, FENS, Cajal, Cold Spring Harbor, and FLiACT. 
+\item Member of Loudoun Education Foundation STEAM Committee 2019-present.
+\end{cvitems}
+\vspace{\acvSectionContentTopSkip}
+
+\cvsection{Mentorship}
+\vspace{\acvSectionContentTopSkip}
+
+\begingroup
+\begin{center}
+%\fontsize{10pt}{1em}\selectfont
+\fontsize{10pt}{1em}\bodyfont\upshape\selectfont
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{ll>{\raggedright\arraybackslash}p{2in}>{\raggedright\arraybackslash}p{2.5in}}
+\hline
+  {\em Name} & {\em Years in lab} & {\em Degree received} & {\em Current Position} \\\hline\hline
+  Alice Robie & 2010-present & & Senior Scientist in my lab \\
+  Mayank Kabra & 2011-2013 & & Machine learning consultant, Kabra Consulting \\
+  Marta Rivera-Alba & 2013-2016& & Lead Data Scientist, Clarity AI\\
+  Nakul Verma & 2013-2017 & & Teaching Faculty, Computer Science, Columbia University\\
+  Kelly Seagraves & 2015-2016 & & C.V. Starr Fellow, Princeton University\\
+  Roian Egnor & 2015-present & & Senior Scientist in my lab\\
+  Iljung (Sam) Kwak & 2015-present & PhD, Computer Science, UCSD, 2019 & Machine Learning Researcher in my lab\\
+  Jiwoong (Daniel) Im & 2016-2020 & & PhD student, Computer Science, NYU\\
+  Rutuja Patil & 2017-present & & Software Engineer in my la.\\
+  Ivan (Felip\'e) Rodriguez & 2017-2018 & M.S., Computer Science, University of Puerto Rico, 2019 & PhD student, Cognitive Science, Brown University \\\hline
+\end{tabular}
+\end{center}
+\endgroup
+\\
+\vspace{.25cm}
+With members of my lab, I've also co-mentored two undergraduate students and three high school students. 2/3 of my mentees have been from groups historically marginalized in STEM. As Head of Computation and Theory, I also provide mentorship and advice to the other 8 Group Leaders within this Research Area. 
+\vspace{\acvSectionContentTopSkip}
+
+\cvsection{Invited Talks}
+\vspace{\acvSectionContentTopSkip}
+\vspace{2mm}
+
+\begin{cvitems}
+\item CVPR Computer Vision for Animals Workshop, June, 2021. 
+\item CVPR Multi-Agent Behavior Workshop, June, 2021.
+\item World Wide Neuro/Tubingen Neuroscience Seminar Series, May, 2021.
+\item HHMI Science Meeting, December, 2020.
+\item Life Sciences Across the Globe, October, 2020.
+\item Georgetown Biology Seminar Series, October, 2020. 
+\item ECCV BioImage Computing Workshop, August, 2020. 
+\item CVPR Workshop on Fine-Grained Visual Categorization, June, 2020. 
+\item NEUBIAS Symposium, Keynote, February, 2020. 
+\item COSYNE Workshop on Interpretable Computational Neuroscience, February, 2020. 
+\item Visipedia Conference, February, 2020. 
+\item Max Planck Institute Future of Neuroscience Symposium, November, 2019.
+\item Janelia Junior Scientist Workshop on Theoretical Neuroscience, October, 2019. 
+\item Stanley Center Symposium, September, 2019. 
+\item Cajal Course on Interacting with Neural Circuits, July, 2019.
+\item NSF Scholarship fund for excellence in Computer Science and Mathematics, University of Puerto Rico, Recinto de Rio Piedras, April, 2019.
+\item Swartz Seminar Series, Yale, March, 2019.
+\item HHMI Food for Thought, HHMI Headquarters, Februrary, 2019.
+\item FENS Winter School on Innate Behavior, January, 2019.
+\item NSF Machine Learning and Biology Workshop, Harvard University Physics of the Living Systems, December, 2018.
+\item Center for Theoretical Neuroscience, Columbia University, November, 2018.
+\item International Brain Lab Annual Meeting, May, 2018. 
+\item Keynote, Simons Collaboration for the Global Brain Annual Meeting, September, 2018.
+\item GRASS Fellows Seminar at Marine Biology Lab, August, 2018.
+\item Cajal Course on the Behavior of Neural Systems, July, 2018.
+\item International Symposium on Biomedical Imaging, April, 2018. 
+\item BigNeuro Workshop, NIPS, December, 2017.
+\item Janelia Coference on Emerging Tools for Acquisition and Interpretation of Whole-Brain Functional Data, November, 2017.
+\item HHMI Science Meeting, October, 2017. 
+\item Champalimaud Neuroscience Seminar, September, 2017. 
+\item Keynote, INCF Neuroinformatics Congress, August, 2017. 
+\item Kavli Workshop on Neural Circuits and Behavior of Drosophila, July, 2017.
+\item Puerto Rico INBRE and COBRE Scientific Symposium, May, 2017.
+\item Universisty of Pennsylvania, GRASP Seminar, April, 2017.
+\item Univesity of Texas, Houston Graduate Student Invited Neuroscience Seminar, February, 2017. 
+\item Workshop on High-Dimensional Neuro-Behavioral Analyses, Cosyne, February, 2017.
+\item Johns Hopkins Biology Department Seminar, February, 2017.
+\item Simons Collaboration on the Global Brain Quantitative Behavior Workshop, November, 2016. 
+\item Society for Neuroscience Minisymposium, November, 2016. 
+\item Coordinating Global Brain Projects, September, 2016.
+\item HHMI Science Meeting, September, 2016. 
+\item Journal of Experimental Biology Evolution of Social Behavior Workshop, March, 2016. 
+\item Stanford Neuroscience Seminar, February, 2016. 
+\item MIT Neurotech Symposium, November, 2015. 
+\item Janelia Conference on Emerging Tools for Acquisition and Interpretation of Whole-Brain Functional Data, November, 2015. 
+\item EMBO Workshop on Neural circuits and behaviour of Drosophila, June, 2015.
+\item BioImage Computing Workshop, CVPR, June, 2015.
+\item Biophysical Society Annual Meeting, February, 2015.
+\item Neuroscience Graduate Program Seminar, Brown, October 2014. 
+\item Janelia Conference on Life in the Aggregate: Mechanisms and Features of Social Dynamics, October, 2014. 
+\item Measuring Behavior, August, 2014.
+\item Mathematical Biosciences Institute Workshop on Analysis of Large Collections of Imaging Data, April, 2014. 
+\item AAAS Neuroscience and Data Sharing Symposium, 2014. 
+\item Advisory Committee to the NIH Director BRAIN Working Group, July, 2013.
+\item FliACT Training Workshop, April, 2013. 
+\item International Symposium on Neuroethology, August, 2012. 
+\item Janelia Machine Learning Conference, May, 2012. 
+\item Cold Spring Harbor Conference on High-Throughput Automated Phenotyping, April, 2012. 
+\item Society for Integrative and Comparative Biology Annual Meeting, January, 2012. 
+\item Annual Drosophila Research Conference, April, 2010. 
+\end{cvitems}
+
+
+
+%-------------------------------------------------------------------------------
+\end{document}
